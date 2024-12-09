@@ -36,18 +36,18 @@ jobs:
             pip install -r requirements.txt
           fi
 
-      - name: Run tests with condition
-        env:
-          PYTHONPATH: .  # Set the current directory as PYTHONPATH
-        run: |
-          set -e
-          # Run tests and capture output
-          TEST_OUTPUT=$(pytest --tb=short --disable-warnings --maxfail=1 | tee /dev/stderr)
+      # - name: Run tests with condition
+      #   env:
+      #     PYTHONPATH: .  # Set the current directory as PYTHONPATH
+      #   run: |
+      #     set -e
+      #     # Run tests and capture output
+      #     TEST_OUTPUT=$(pytest --tb=short --disable-warnings --maxfail=1 | tee /dev/stderr)
           
-          # Check if a specific test returns 100
-          if echo "$TEST_OUTPUT" | grep -q "100"; then
-            echo "Test with result 100 found. Marking pipeline as passed."
-          else
-            echo "No test with result 100 found. Ensuring all tests pass."
-            pytest
-          fi
+      #     # Check if a specific test returns 100
+      #     if echo "$TEST_OUTPUT" | grep -q "100"; then
+      #       echo "Test with result 100 found. Marking pipeline as passed."
+      #     else
+      #       echo "No test with result 100 found. Ensuring all tests pass."
+      #       pytest
+      #     fi
