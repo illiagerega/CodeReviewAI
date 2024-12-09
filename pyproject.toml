@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "CodeReviewAI"
+version = "0.1.0"
+description = "Automated Code Review Tool using Python, FastAPI, OpenAI, and GitHub API."
+authors = ["Illia Hereha"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.75.0"
+httpx = "^0.21.0"
+pydantic = "^1.8.2"
+redis = "^4.0.2"
+uvicorn = "^0.17.0"
+python-dotenv = "^0.19.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+httpx = "^0.21.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
