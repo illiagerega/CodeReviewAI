@@ -1,4 +1,4 @@
-# CodeReviewA
+# CodeReviewAI
 
 ## Introduction
 CodeReviewA is an automated coding assignment review tool that leverages OpenAI's GPT API and GitHub API to provide insightful code reviews. 
@@ -19,7 +19,7 @@ CodeReviewA is an automated coding assignment review tool that leverages OpenAI'
     ```bash
     pip3 install -r requirements.txt
 
-3. Set enviroment variables in .env file
+3. Set enviroment variables in .env file. Don't forget to change repo url in the tests and other test data
 
 4. Start the application
     ```bash
