@@ -51,3 +51,4 @@ jobs:
             poetry run pytest tests/
           else
             pytest
+          fi
