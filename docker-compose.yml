@@ -8,10 +8,12 @@ services:
     environment:
       - GITHUB_TOKEN=${GITHUB_TOKEN}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
     volumes:
-      - .:/app  # Mount current directory to /app in the container for live updates
+      - .:/app
     depends_on:
-      - redis  # Ensure Redis is started before the app
+      - redis
 
   redis:
     image: redis:alpine
